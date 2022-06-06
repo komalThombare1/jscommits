@@ -69,8 +69,8 @@ const { spawn } = require('child_process');
 
   const child = spawn('npm', ['run', 'tsc']);
 
-  child.stdout.pipe(process.stdout);
-  child.stderr.pipe(process.stderr);
+  /*child.stdout.pipe(process.stdout);
+  child.stderr.pipe(process.stderr);*/
 
   child.on('exit', async code => {
     console.timeEnd('Execution...');
@@ -82,6 +82,6 @@ const { spawn } = require('child_process');
       console.log(chalk.green('🤪 All tsx demo passed. Congratulations!'));
     }
 
-    process.exit(code);
+  /*process.exit(code);*/
   });
 })();
